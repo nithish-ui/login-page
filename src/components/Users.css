@@ -1,0 +1,26 @@
+.users-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #ccc;
+    min-height: 100vh;
+  }
+  
+  .user-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .user-card {
+    margin: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .user-card img {
+    width: 100px;
+    border-radius: 50%;
+  }
+  

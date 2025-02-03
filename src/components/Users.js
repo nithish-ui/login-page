@@ -17,10 +17,9 @@ const Users = () => {
       <div className="user-list">
         {users.map((user) => (
           <div key={user.id} className="user-card">
+            <img src={user.avatar} alt={user.first_name} />
             <h3>{user.first_name}</h3>
             <p>{user.email}</p>
-            <img src={user.avatar} alt={user.first_name} />
-            
           </div>
         ))}
       </div>

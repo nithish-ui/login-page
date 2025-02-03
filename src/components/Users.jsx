@@ -1,31 +1,26 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import "./Users.css";
+import React from "react";
+import "./users.css";
 
-const Users = () => {
-  const [users, setUsers] = useState([]);
+const users = [
+  { id: 1, name: "John Doe", email: "john@example.com", img: "https://via.placeholder.com/80" },
+  { id: 2, name: "Jane Smith", email: "jane@example.com", img: "https://via.placeholder.com/80" },
+];
 
-  useEffect(() => {
-    axios.get("https://reqres.in/api/users?page=1").then((response) => {
-      setUsers(response.data.data);
-    });
-  }, []);
-
+function Users() {
   return (
     <div className="users-container">
-      <h2>Hello ReqRes users!</h2>
+      <h1 className="text-xl font-bold mb-4">Users List</h1>
       <div className="user-list">
         {users.map((user) => (
           <div key={user.id} className="user-card">
-            <h3>{user.first_name}</h3>
-            <p>{user.email}</p>
-            <img src={user.avatar} alt={user.first_name} />
-            
+            <img src={user.img} alt={user.name} />
+            <h2 className="text-lg font-semibold">{user.name}</h2>
+            <p className="text-gray-600">{user.email}</p>
           </div>
         ))}
       </div>
     </div>
   );
-};
+}
 
 export default Users;

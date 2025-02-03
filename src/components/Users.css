@@ -1,26 +1,47 @@
 .users-container {
-    text-align: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
     padding: 20px;
-    background-color: #ccc;
+    background-color: white;
     min-height: 100vh;
-  }
-  
-  .user-list {
+}
+
+.user-list {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .user-card {
-    margin: 15px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.user-card {
+    width: 250px;
+    margin: 10px 0;
     padding: 15px;
     background: white;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-  }
-  
-  .user-card img {
-    width: 100px;
+    border: 2px solid #00FFFF;
+}
+
+.user-card img {
+    width: 80px;
     border-radius: 50%;
-  }
-  
+    border: 2px solid #00FFFF;
+}
+
+button {
+    background-color: #00FFFF;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    width: 75%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00CED1;
+}
